@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="PhysGM: Large Physical Gaussian Model for Feed-Forward 4D Synthesis">
+  <meta property="og:title" content="PhysGM: Large Physical Gaussian Model for Feed-Forward 4D Synthesis"/>
+  <meta property="og:description" content="PhysGM can generate high-quality 4D physics simulations from a single image in under 30 seconds."/>
+  <meta property="og:url" content="https://your-website-url.com"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="PhysGM: Large Physical Gaussian Model for Feed-Forward 4D Synthesis">
+  <meta name="twitter:description" content="PhysGM can generate high-quality 4D physics simulations from a single image in under 30 seconds.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="4D generation, physics simulation, Gaussian splatting, computer vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>PhysGM</title>
+  <link rel="icon" type="image/x-icon" href="static/images/physics.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">PhysGM: Large Physical Gaussian Model for Feed-Forward 4D Synthesis</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Chunji Lv</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zequn Chen</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Donglin Di</a><sup>2</sup>,</span>
+                    <span class="author-block">
+                      <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Weinan Zhang</a><sup>3</sup>,</span>
+                      <span class="author-block">
+                        <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Hao Li</a><sup>2</sup>,</span>
+                        <span class="author-block">
+                          <a href="SIXTH AUTHOR PERSONAL LINK" target="_blank">Wei Chen</a><sup>2</sup>,</span>
+                          <span class="author-block">
+                            <a href="SEVENTH AUTHOR PERSONAL LINK" target="_blank">Changsheng Li</a><sup>1</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>Beijing Institute of Technology&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>Li Auto Inc.&nbsp;&nbsp;&nbsp;&nbsp;<sup>3</sup>Harbin Institute of Technology<br>Conferance name and year</span>
+                    
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                      <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                    
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Supplementary PDF link -->
+                  <span class="link-block">
+                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video autoplay muted loop playsinline height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+      PhysGM can generate high-quality 4D physics simulations from a single image in under 30 seconds.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           While physics-grounded 3D motion synthesis has seen significant progress, current methods face critical limitations. They typically rely on pre-reconstructed 3D Gaussian Splatting (3DGS) representations, while physics integration depends on either inflexible, manually defined physical attributes or unstable, optimization-heavy guidance from video models. To overcome these challenges, we introduce <strong>PhysGM</strong>, a feed-forward framework that jointly predicts a 3D Gaussian representation and its physical properties from a single image, enabling immediate, physical simulation and high-fidelity 4D rendering. We first establish a base model by jointly optimizing for Gaussian reconstruction and probabilistic physics prediction. The model is then refined with physically plausible reference videos to enhance both rendering fidelity and physics prediction accuracy. We adopt the Direct Preference Optimization (DPO) to align its simulations with reference videos, circumventing Score Distillation Sampling (SDS) optimization which needs back-propagating gradients through the complex differentiable simulation and rasterization. To facilitate the training, we introduce a new dataset PhysAssets of over 24,000 3D assets, annotated with physical properties and corresponding guiding videos. Experimental results demonstrate that our method effectively generates high-fidelity 4D simulations from a single image in one minute. This represents a significant speedup over prior works while delivering realistic rendering results.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image display -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <h2 class="title is-4">Pipeline</h2>
+          <!-- Image viewer -->
+          <div class="box has-text-centered">
+            <img src="static/images/pipeline.png" alt="pipeline" style="max-width:100%;height:auto;"/>
+          </div>
+                     <!-- Description below image -->
+           <div class="content has-text-left">
+                           <p class="has-text-grey" style="text-indent: 2em;">
+                <strong>Architecture of PhysGM.</strong> The model conditions on one or more input views and their corresponding camera parameters, which are processed by a U-Net encoder to produce a shared latent representation <em>z</em>. This latent is then decoded by two parallel heads: (1) a <em>Gaussian Head</em> predicting the initial 3D Gaussian scene parameters <em>ψ</em>, and (2) a <em>Physics Head</em> that predicts a distribution over the object's physical properties <em>θ</em>. The sampled parameters (<em>ψ</em>, <em>θ</em>) initialize a Material Point Method (MPM) simulator to generate the final dynamic sequence. The entire architecture is trained in a two-stage paradigm: first, supervised pre-training on ground-truth data establishes a robust generative prior. Subsequently, a DPO-based fine-tuning stage uses the ranks against a ground-truth video and aligns the model with physically plausible results.
+               </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image display -->
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-4">Dropping scenarios</h2>
+      <video autoplay muted loop playsinline height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/down.mp4"
+        type="video/mp4">
+      </video>
+      
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-4">Stretching scenarios</h2>
+      <video autoplay muted loop playsinline height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/stretching3.mp4"
+        type="video/mp4">
+      </video>
+      
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-4"> Multi-object interaction scenarios</h2>
+      <video autoplay muted loop playsinline height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/multi.mp4"
+        type="video/mp4">
+      </video> 
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+ 
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-4">In-the-wild scenarios</h2>
+      <video autoplay muted loop playsinline height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/in-the-wild2.mp4"
+        type="video/mp4">
+      </video>
+      
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Video Grid Section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-12">
+          <h2 class="title is-4 has-text-centered">Other Results</h2>
+          
+          <!-- Video Grid Container -->
+          <div class="video-grid-container">
+            <div class="video-grid" id="videoGrid">
+             
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other24.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+             
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other17.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other26.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other15.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other7.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other16.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other1.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other2.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other3.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other4.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other5.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other6.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other8.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other9.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <!-- Video Card 4 -->
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other10.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other12.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other13.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other14.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other18.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other21.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other22.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other23.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other27.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="video-grid-item">
+                <div class="video-wrapper">
+                  <video autoplay muted loop playsinline>
+                    <source src="static/videos/other28.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Video Grid Section -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
